@@ -1,12 +1,30 @@
 // Setup 'tick' sound
 const tick = new Audio('sounds/tick.mp3');
 
+
+//variable to keep track of count
+let metronomeCount = 0
+
+
 // This function is called every 600ms
 function update() {
-
+    if(metronomeCount % 4 === 0){
+    //    console.log('tock')
+        tock.play() 
+       metronomeCount++
+    }else{
     // Play the 'tick' sound
-    tick.play();
+    console.log(metronomeCount)
+    tick.play(); 
+    metronomeCount++
+}   
+ const displayCount = document.querySelector('#content')
+displayCount.innerText = metronomeCount
+
+
 }
+
+
 
 // This function sets up update() to be called every 600ms
 function setupUpdate() {
@@ -27,9 +45,9 @@ function addTock(){
 }
 
 // function sets up addTock() to be called every 2400ms
-function setUpAddTock(){
-    setInterval(addTock, 2400)
-}
+// function setUpAddTock(){
+//     setInterval(addTock, 2400)
+// }
 
 //call setUpAddTock () once every 1200ms
 setTimeout(setUpAddTock, 1200)
