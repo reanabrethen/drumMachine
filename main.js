@@ -16,21 +16,26 @@ const hiHatBox = document.querySelector('#hi-hat')
 //variable to keep track of count
 let metronomeCount = 1
 
+//timing queries
+const kickDrumTiming = document.querySelector('#kick-drum-timing')
+const snareDrumTiming = document.querySelector('#snare-drum-timing')
+const hiHatTiming = document.querySelector('#hi-hat-timing')
 
 // This function is called every 600ms                 @end 
 function update() {
+    // console.log(typeof kickDrumTiming.value)
    if(metronomeCount > 4){
     metronomeCount = 1
    }
     if(metronomeCount === 4 && metronomeBox.checked){
         tock.play()
-    }else if(metronomeBox.checked ){
-        tick.play()
-    }if(kickDrumBox.checked){
-        kickDrum.play()
-    }if(snareDrumBox.checked){
+    }else if(metronomeBox.checked){
+            tick.play()
+    }if(kickDrumBox.checked && metronomeCount === parseInt(kickDrumTiming.value)){
+           kickDrum.play()
+    }if(snareDrumBox.checked && metronomeCount === parseInt(snareDrumTiming.value)){
         snareDrum.play()
-    }if(hiHatBox.checked){
+    }if(hiHatBox.checked && metronomeCount === parseInt(hiHatTiming.value)){
         hiHat.play()
     }
    
@@ -39,7 +44,6 @@ function update() {
     metronomeCount++
 }
 
-// }
 
 // This function sets up update() to be called every 600ms
 function setupUpdate() {
@@ -50,12 +54,13 @@ function setupUpdate() {
 setTimeout(setupUpdate, 300);
 
 
-//function called every 2400ms
 function addTock(){
     //play the 'tock' sound
     tock.play()
 }
 
+
+//**!!do not need as an interval has already been set!!**
 // function sets up addTock() to be called every 2400ms
 // function setUpAddTock(){
 //     setInterval(addTock, 2400)
