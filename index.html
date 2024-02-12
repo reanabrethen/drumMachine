@@ -8,56 +8,63 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>BEAT BOX</h1>
     <!-- <div class="box"> -->
 
 </div>
-    <div class="tip">
-        Check the boxes to make your own beat!
+    <div class="tip">Check the boxes to make your own beat!
+
     </div>
 
+<div id="square-dance">
+        <div class="square-one"></div>
+        <div class="square-two"></div>
+        <div class="square-three"></div>
+        <div class="square-four"></div>
+        <div class="square-five"></div>
+        <div class="square-six"></div>
+        <div class="square-seven"></div>
+</div>
     
-    <div class="metronome">
+    <!-- <div class="metronome">
         <div class="background-left"></div>
         <div class="background-center">
             <div class="core"></div>
         </div>
         <div class="background-right"></div>
         <div class="arm"></div>
-    </div>
+    </div> -->
+
     <div id="content"></div>
-    <div id="column-1">
-        <input type="checkbox" id="metronome" value="metronome" >
+    <div id="checkboxes">
+        <input type="checkbox" id="metronome" value="metronome" checked >
         <label for="metronome">Metronome</label>
         
         <input type="checkbox" id="kick-drum" value="kick-drum">
         <label for="kick-drum">Kick drum</label>
         <!--add number inputs-->
         <input type="number" max="4" min="1" id="kick-drum-timing">
-       
-        <div class="column-2"> 
-            <input type="checkbox" id="snare-drum" value="snare-drum">
-            <label for="snare-drum">Snare drum </label>
-            <input type="number" max="4" min="1" id="snare-drum-timing">
+
+        <input type="checkbox" id="snare-drum" value="snare-drum">
+        <label for="snare-drum">Snare drum </label>
+        <input type="number" max="4" min="1" id="snare-drum-timing">
         
-            <input type="checkbox" id="hi-hat" value="hi-hat">
-            <label for="hi-hat">Hi hat</label>
-            <input type="number" max="4" min="1" id="hi-hat-timing">
-        </div>
-        <div class="column-3">
-            <input type="checkbox" id="techno-bells" value="techno-bells">
-            <label for="techno-bells">Techno Bells</label>
-            <input type="number" max="4" min="1" id="techno-bells-timing">
+        <input type="checkbox" id="hi-hat" value="hi-hat">
+        <label for="hi-hat">Hi hat</label>
+        <input type="number" max="4" min="1" id="hi-hat-timing">
+        
+        <input type="checkbox" id="techno-bells" value="techno-bells">
+        <label for="techno-bells">Techno Bells</label>
+        <input type="number" max="4" min="1" id="techno-bells-timing">
 
-            <input type="checkbox" id="saxident" value="saxident">
-            <label for="saxident">Saxident</label>
-            <input type="number" max="4" min="1" id="saxident-timing">
-        </div>
-        <div class="column-4">
-            <input type="checkbox" id="the-stomp" value="the-stomp">
-            <label for="the-stomp">Stomp</label>
-            <input type="number" max="4" min="1" id="the-stomp-timing">
+        <input type="checkbox" id="saxident" value="saxident">
+        <label for="saxident">Saxident</label>
+        <input type="number" max="4" min="1" id="saxident-timing">
+        
+        <input type="checkbox" id="the-stomp" value="the-stomp">
+        <label for="the-stomp">Stomp</label>
+        <input type="number" max="4" min="1" id="the-stomp-timing">
 
-        </div>
       </div>
 
     <script src="main.js"></script>

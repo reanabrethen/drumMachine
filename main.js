@@ -75,7 +75,6 @@ function addTock(){
     tock.play()
 }
 
-
 //**!!do not need as an interval has already been set!!**
 // function sets up addTock() to be called every 2400ms
 // function setUpAddTock(){
@@ -84,3 +83,13 @@ function addTock(){
 
 //call setUpAddTock () once every 1200ms
 // setTimeout(setUpAddTock, 1200)
+
+
+//square edits
+
+//doesnt work? below
+const square1 = document.querySelector('.square-one')
+
+// square1.addEventListener('click',()=>{
+//     metronomeBox.play()
+// })

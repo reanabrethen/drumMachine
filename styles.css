@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Alice", serif ;
+    font-family: "Rubik", sans-serif ;
+    src: url(https://fonts.googleapis.com/css2?family=Alice&family=Rubik&display=swap);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,24 +15,121 @@ body {
     justify-content: center;
     margin: none;
     flex-direction: column;
-    background-color: #136a7d;
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Rubik' , sans-serif;
+    font-size: 60px;
+    color: silver;
 }
 
 .tip {
-    font-style: italic;
     font-weight: bold;
     margin: 24px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: silver;
 }
 
-.metronome {
+#content{
+    color:silver;
+    font-size: 25px;;
+}
+
+#checkboxes{
+    color: silver;
+    display: flex;
+    grid-template-columns: ;
+}
+
+#square-dance{
+ display: flex;
+    flex-direction: row;
+}
+
+.square-one{
+    height:150px;
+    width:150px;
+    background-color: rgb(186, 12, 12);
+    cursor: pointer;
+    
+}
+.square-one:hover{
+    box-shadow: 0 0 10px red;
+}
+
+.square-two{
+    height:150px;
+    width:150px;
+    background-color: rgb(224, 156, 32);
+    cursor: pointer;
+}
+.square-two:hover{
+    box-shadow: 0 0 10px orange;
+}
+
+
+.square-three{
+    height:150px;
+    width:150px;
+    background-color: gold;
+    cursor: pointer;
+}
+.square-three:hover{
+    box-shadow: 0 0 10px yellow;
+}
+
+.square-four{
+    height:150px;
+    width:150px;
+    background-color: green;
+    cursor: pointer;
+}
+.square-four:hover{
+    box-shadow: 0 0 10px greenyellow;
+}
+
+
+.square-five{
+    height:150px;
+    width:150px;
+    background-color: blue;
+    cursor: pointer;
+}
+.square-five:hover{
+    box-shadow: 0 0 10px turquoise;
+}
+
+
+.square-six{
+    height:150px;
+    width:150px;
+    background-color: purple;
+    cursor: pointer;
+}
+.square-six:hover{
+    box-shadow: 0 0 10px blueviolet;
+}
+
+.square-seven{
+    height:150px;
+    width:150px;
+    background-color: floralwhite;
+    cursor: pointer;
+}
+.square-seven:hover{
+    box-shadow: 0 0 10px hotpink;
+}
+
+
+/* .metronome {
     display: flex;
     width: 350px;
     height: 400px;
     position: relative;
-}
+} */
 
-.background-left {
+/* .background-left {
     border-bottom: 400px solid #e07a5f;
     border-left: 100px solid transparent;
 }
@@ -69,29 +172,7 @@ body {
     left: 165px;
     transform-origin: bottom center;
     animation: tick 1200ms ease-in-out infinite;
-}
-
-#column-1{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-#column-2{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-#column-3{
-    display: flex;
-    align-self: right;
-    justify-content: right;
-    flex-direction: column;
-    text-align: center;
-}
+} */
 
 /* 
 .box {
@@ -108,21 +189,13 @@ body {
     /* animation-timing-function: ease-out; */
 /* }
 
-@keyframes box{
 
-    0%{background-color: aquamarine; left:0; top:0;
-     }
-    
-    25%{background-color: greenyellow; left:500px; top:0;
-        border-radius: 25% 25% 25% 25%; }
+/*  */
 
-    50%{background-color: gold; left:500px; top:500px;
-        border-radius: 40% 40% 40% 40%; }
+@keyframes square-dance {
 
-    75%{background-color: salmon; left:0px; top:500px;
-        border-radius: 90% 90% 90% 90%; }
+    100% {
+        transform: rotate(360deg);
+    }
 
-    100%{background-color: aquamarine; left:0; top:0; 
-       }
-    
-/* } */ 
+    }
